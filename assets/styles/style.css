@@ -1,0 +1,45 @@
+/* Подключение шрифтов */
+@font-face {
+  font-family: 'Karla-Regular';
+  src: url('../fonts/Karla-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Karla-Bold';
+  src: url('../fonts/Karla-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora-Regular';
+  src: url('../fonts/Lora-Regular.ttf') format('truetype');
+}
+
+/* Общие стили */
+body {
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+header, footer {
+  max-width: 1440px;
+}
+h2 {
+  font-family: 'Lora-Regular', Times, sans-serif;
+  font-weight: normal;
+  font-size: 54px;
+  line-height: 1.3em;
+  color: #41444e;
+}
+
+
+/*Блок header*/
+
+/*Информационная страница № 1*/
+
+/*Информационная страница № 2*/
+
+/*Информационная страница № 3*/
+
+/*Страница с e-mail*/
+
+/*Блок footer*/
