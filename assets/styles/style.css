@@ -21,8 +21,13 @@ body {
   margin: 0;
   padding: 0;
 }
+<<<<<<< HEAD
 /*тут приняла ширину экрана 1440px, согласно макету, дописывайте названия своих блоков сюда*/
 header, footer, .block-2 {
+=======
+/*тут приняла ширину экрана 1440px, согласно макету*/
+.main-wrapper {
+>>>>>>> 930b916b1e621befbaf9fbab9bad80afde2b2114
   max-width: 1440px;
 }
 h2 {
@@ -32,11 +37,85 @@ h2 {
   line-height: 1.3em;
   color: #41444e;
 }
+.subtitle {
+  font-family: 'Karla-Bold', Times, sans-serif;
+  font-size: 20px;
+  color: #a8abb3;
+}
+.text-info {
+  font-family: 'Karla-Regular', Times, sans-serif;
+  font-size: 18px;
+  line-height: 1.6em;
+  color: #222;
+}
 
 
 /*Блок header*/
 
-/*Главная страница*/
+/*Блок main*/
+.main {
+  padding: 0 4vw;
+}
+.main-wrapper {
+  margin: 4vh auto;
+  display: flex;
+  align-items: center;
+}
+.main-info__subtitle {
+  margin: 6% 0 3%;
+}
+.main-info__title {
+  max-width: 80%;
+  margin-bottom: 3%;
+}
+.break::after {
+  content: "\A";
+  white-space: pre;
+}
+.main-container {
+  max-width: 50%;
+  position: relative;
+}
+.main-container__image {
+  width: 100%;
+  height: auto;
+}
+.main-container__telegram {
+  position: absolute;
+  right: 30px;
+  bottom: 16px;
+}
+
+
+/*Медиа-запросы для блока main*/
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .main-info__title {
+    font-size: 46px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .main-wrapper {
+    flex-direction: column;
+  }
+  .main-info {
+    text-align: center;
+  }
+  .main-info__title {
+    margin: auto;
+    font-size: calc(1rem + 2.8vw);
+  }
+  .main-info__subtitle, .main-info__text {
+    font-size: calc(1rem + 0.5vw);
+  }
+  .main-container {
+    margin-top: 1vh;
+    max-width: 100%;
+  }
+  .main-container__telegram {
+    top: 8px;
+    font-size: 0.8rem;
+  }
+}
 
 /*Информационная страница № 1*/
 
