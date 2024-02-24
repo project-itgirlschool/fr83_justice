@@ -77,15 +77,15 @@ h2 {
 }
 .main-container__telegram {
   position: absolute;
-  right: 30px;
-  bottom: 16px;
+  right: 2vw;
+  bottom: 2vh;
 }
 
 
 /*Медиа-запросы для блока main*/
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .main-info__title {
-    font-size: 46px;
+    font-size: calc(1rem + 3vw);
   }
 }
 @media screen and (max-width: 991px) {
@@ -97,7 +97,7 @@ h2 {
   }
   .main-info__title {
     margin: auto;
-    font-size: calc(1rem + 2.8vw);
+    font-size: calc(1rem + 3vw);
   }
   .main-info__subtitle, .main-info__text {
     font-size: calc(1rem + 0.5vw);
@@ -107,7 +107,7 @@ h2 {
     max-width: 100%;
   }
   .main-container__telegram {
-    top: 8px;
+    top: 0.3vh;
     font-size: 0.8rem;
   }
 }
