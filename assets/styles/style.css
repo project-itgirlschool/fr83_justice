@@ -21,6 +21,8 @@ body {
   margin: 0;
   padding: 0;
 }
+/*тут приняла ширину экрана 1440px, согласно макету, дописывайте названия своих блоков сюда*/
+
 /*тут приняла ширину экрана 1440px, согласно макету*/
 .main-wrapper {
   max-width: 1440px;
@@ -115,7 +117,62 @@ h2 {
 /*Информационная страница № 1*/
 
 /*Информационная страница № 2*/
+.block-2 {
+  margin: 4vw;
+}
 
+h3 {
+  font-family: 'Karla-Bold';
+}
+
+h5 {
+  font-family: 'Lora-Regular';
+}
+.col {
+  margin-bottom: 20px;
+}
+.card {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  transition: transform 4s ease-in-out;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Начальный цвет, полностью прозрачный */
+  transition: background-color 0.3s ease-in-out;
+  z-index: 1; /* Помещаем поверх изображения, но под текстом */
+}
+
+.card:hover::before {
+  background-color: rgba(0, 0, 0, 0.8);
+  
+}
+.card:hover img {
+  transform: translateX(-200px);
+}
+.card-body {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  color: #0e0d0d;
+  transition: color 0.3s ease-in-out;
+}
+
+.card:hover .card-body {
+  color: #f1efef;
+}
 /*Информационная страница № 3*/
 
 /*Страница с e-mail*/
