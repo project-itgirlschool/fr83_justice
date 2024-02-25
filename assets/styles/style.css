@@ -21,9 +21,6 @@ body {
   margin: 0;
   padding: 0;
 }
-/*тут приняла ширину экрана 1440px, согласно макету, дописывайте названия своих блоков сюда*/
-
-/*тут приняла ширину экрана 1440px, согласно макету*/
 .main-wrapper {
   max-width: 1440px;
 }
@@ -39,20 +36,19 @@ h2 {
   font-size: 20px;
   color: #a8abb3;
 }
-.text-info {
+.text-description {
   font-family: 'Karla-Regular', Times, sans-serif;
   font-size: 18px;
   line-height: 1.6em;
   color: #222;
 }
-
+.main, .contact {
+  padding: 0 4vw;
+}
 
 /*Блок header*/
 
 /*Блок main*/
-.main {
-  padding: 0 4vw;
-}
 .main-wrapper {
   margin: 4vh auto;
   display: flex;
@@ -82,37 +78,10 @@ h2 {
   right: 2vw;
   bottom: 2vh;
 }
-
-
-/*Медиа-запросы для блока main*/
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  .main-info__title {
-    font-size: calc(1rem + 3vw);
-  }
+.main-container__telegram img {
+  margin-left: 0.6vw;
 }
-@media screen and (max-width: 991px) {
-  .main-wrapper {
-    flex-direction: column;
-  }
-  .main-info {
-    text-align: center;
-  }
-  .main-info__title {
-    margin: auto;
-    font-size: calc(1rem + 3vw);
-  }
-  .main-info__subtitle, .main-info__text {
-    font-size: calc(1rem + 0.5vw);
-  }
-  .main-container {
-    margin-top: 1vh;
-    max-width: 100%;
-  }
-  .main-container__telegram {
-    top: 0.3vh;
-    font-size: 0.8rem;
-  }
-}
+
 
 /*Информационная страница № 1*/
 
@@ -176,5 +145,51 @@ h5 {
 /*Информационная страница № 3*/
 
 /*Страница с e-mail*/
+.contact-section {
+  max-width: 690px;
+  margin: 10% auto;
+  text-align: center;
+}
+.contact-section__title {
+  margin: 3% 0 6%;
+}
+.email-button {
+  padding: 10px;
+  text-decoration: none;
+  background-color: #a8abb3;
+}
 
 /*Блок footer*/
+
+
+/*Медиа-запросы для блоков main, contact*/
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .main-info__title, .contact-section__title {
+    font-size: calc(1rem + 3vw);
+  }
+}
+@media screen and (max-width: 991px) {
+  .main-wrapper {
+    flex-direction: column;
+  }
+  .main-info {
+    text-align: center;
+  }
+  .main-info__title {
+    margin: auto;
+  }
+  .main-info__title, .contact-section__title {
+    font-size: calc(1rem + 3vw);
+  }
+  .main-info__subtitle, .main-info__text, .contact-section__subtitle {
+    font-size: calc(1rem + 0.5vw);
+  }
+  .main-container {
+    margin-top: 1vh;
+    max-width: 100%;
+  }
+  .main-container__telegram {
+    top: 0.3vh;
+    font-size: 1em;
+  }
+}
