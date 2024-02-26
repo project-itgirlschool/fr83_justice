@@ -17,14 +17,14 @@ body {
   width: 100%;
   background-color: #efeeee;
 }
-* {
+*, ul {
   margin: 0;
   padding: 0;
 }
-.main-wrapper {
+.main-wrapper, .header-wrapper {
   max-width: 1440px;
 }
-h2 {
+h2, .header-font {
   font-family: 'Lora-Regular', Times, sans-serif;
   font-weight: normal;
   font-size: 54px;
@@ -42,17 +42,60 @@ h2 {
   line-height: 1.6em;
   color: #222;
 }
-.main, .contact {
+.header, .main, .contact {
   padding: 0 4vw;
+}
+ul {
+  list-style: none;
+}
+.break::after {
+  content: "\A";
+  white-space: pre;
 }
 
 /*Блок header*/
+.header-wrapper {
+  margin: 2vh auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__title {
+  text-align: center;
+  font-size: calc(0.8rem + 0.1vw);
+  color: #222;
+}
+.header__nav {
+  margin-right: 10%;
+}
+.nav-item {
+  display: inline-block;
+}
+.item-services, .item-contacts {
+  text-decoration: none;
+  font-size: calc(1rem + 0.2vw);
+  color: #222;
+}
+.item-contacts {
+  margin-left: 5vw;
+}
+.header__burger, .burger {
+  display: none;
+}
+
 
 /*Блок main*/
 .main-wrapper {
-  margin: 4vh auto;
+  margin: 4vh auto 8vh;
   display: flex;
   align-items: center;
+}
+.main-info__logo {
+  border-radius: 100px;
+  max-width: 80px;
+  margin-left: 6%;
+  padding: 10px;
+  background-color: #222;
 }
 .main-info__subtitle {
   margin: 6% 0 3%;
@@ -60,10 +103,6 @@ h2 {
 .main-info__title {
   max-width: 80%;
   margin-bottom: 3%;
-}
-.break::after {
-  content: "\A";
-  white-space: pre;
 }
 .main-container {
   max-width: 50%;
@@ -224,15 +263,16 @@ h3 {
 /*Блок footer*/
 
 
-/*Медиа-запросы для блоков main, contact*/
+/*Медиа-запросы для блоков header, main, contact*/
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .main-info__title, .contact-section__title {
     font-size: calc(1rem + 3vw);
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 576px) and (max-width: 991px) {
   .main-wrapper {
     flex-direction: column;
+    margin-top: 6vh;
   }
   .main-info {
     text-align: center;
@@ -253,5 +293,57 @@ h3 {
   .main-container__telegram {
     top: 0.3vh;
     font-size: 1em;
+  }
+}
+@media screen and (max-width: 575px) {
+  .main-wrapper {
+    flex-direction: column;
+    margin-top: 6vh;
+  }
+  .main-info {
+    text-align: center;
+  }
+  .main-info__title {
+    margin: auto;
+  }
+  .main-info__title, .contact-section__title {
+    font-size: calc(1rem + 3vw);
+  }
+  .main-info__subtitle, .main-info__text, .contact-section__subtitle {
+    font-size: calc(1rem + 0.5vw);
+  }
+  .main-container {
+    margin-top: 1vh;
+    max-width: 100%;
+  }
+  .main-container__telegram {
+    top: 0.3vh;
+    font-size: 1em;
+  }
+  /*Бургер-меню*/
+  .burger-menu {
+    width: 40px;
+  }
+  .burger {
+    display: block;
+    position: absolute;
+    right: 5%;
+  }
+  .header__nav {
+    display: none;
+    margin: 0;
+  }
+
+  /*условие появления бургер-меню*/
+  #burger-checkbox:checked + label + nav {
+    display: block;
+  }
+  .header__nav-items {
+    position: absolute;
+    text-align: end;
+    margin-top: 20px;
+    padding: 10px;
+    background: #a8abb31c;
+    transform: translateX(-100%);
   }
 }

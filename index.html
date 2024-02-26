@@ -9,10 +9,23 @@
   <title>Document</title>
 </head>
 <body>
+  <header class="header">
+    <div class="header-wrapper">
+        <div class="header__title header-font">По закону<span class="break"></span>и точка</div>
+        <input type="checkbox" id="burger-checkbox" class="header__burger">
+        <label class="burger" for="burger-checkbox"><img class="burger-menu" src="./assets/images/burger-menu.svg" alt="burger-menu"></label>
+        <nav class="header__nav">
+          <ul class="header__nav-items">
+            <li class="nav-item"><a href="#" class="item-services header-font">Услуги</a></li>
+            <li class="nav-item"><a href="#contact-email" class="item-contacts header-font">Контакты</a></li>
+          </ul>
+        </nav>
+    </div>
+  </header>
   <main class="main">
     <div class="main-wrapper">
       <div class="main-info">
-        <img class="main-info__logo" src="./assets/images/logo_justice.png" alt="logo">
+        <img class="main-info__logo" src="./assets/images/logo-main.svg" alt="logo">
         <div class="main-info__subtitle subtitle">ЮРИДИЧЕСКИЕ УСЛУГИ С 2007 ГОДА</div>
         <h2 class="main-info__title">СУДЕБНЫЕ ДЕЛА НАША СПЕЦИАЛИЗАЦИЯ</h2>
         <p class="main-info__text text-description">Мы не даем пустых обещаний,<span class="break"></span>
@@ -175,7 +188,7 @@
   });
 </script>
   </div>
-  <div class="contact">
+  <div class="contact" id="contact-email">
     <div class="contact-section">
       <div class="contact-section__subtitle subtitle">ХОТИТЕ РЕШИТЬ СВОИ ПРОБЛЕМЫ?</div>
       <h2 class="contact-section__title">СВЯЖИТЕСЬ С НАМИ
