@@ -154,11 +154,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   $(document).ready(function () {
-    let currentIndex = 0;
-    const cardContainer = $(".card-container");
-    const cardWidth = $(".card").outerWidth();
+  let currentIndex = 0;
+  const cardContainer = $(".card-container");
+  const cardWidth = $(".card-3").outerWidth();
 
-    $(".next-btn").on("click", function () {
+  $(".next-btn").on("click", function () {
     if (currentIndex < cardContainer.children().length - 1) {
       currentIndex++;
       updateCardVisibility();
@@ -172,20 +172,19 @@
     }
   });
 
-    function updateCardVisibility() {
-      const cardWidth = $(".card").outerWidth();
-      const newPosition = -currentIndex * cardWidth;
-      cardContainer.css("transform", "translateX(" + newPosition + "px)");
+  function updateCardVisibility() {
+    const newPosition = -currentIndex * cardWidth;
+    cardContainer.css("transform", "translateX(" + newPosition + "px)");
 
-      $(".prev-btn, .next-btn").show();
+    $(".prev-btn, .next-btn").show();
 
     if (currentIndex === 0) {
       $(".prev-btn").hide();
     } else if (currentIndex === cardContainer.children().length - 1) {
       $(".next-btn").hide();
     }
-    }
-  });
+  }
+});
 </script>
   </div>
   <div class="contact" id="contact-email">
