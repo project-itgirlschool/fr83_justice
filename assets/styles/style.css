@@ -21,7 +21,7 @@ body {
   margin: 0;
   padding: 0;
 }
-.main-wrapper, .header-wrapper {
+.main-wrapper, .header-wrapper, .footer-wrapper {
   max-width: 1440px;
 }
 h2, .header-font {
@@ -42,11 +42,21 @@ h2, .header-font {
   line-height: 1.6em;
   color: #222;
 }
-.header, .main, .contact {
+.header, .main, .contact, .footer {
   padding: 0 4vw;
+}
+.logo {
+  border-radius: 100px;
+  max-width: 100px;
+  margin-left: 6%;
+  padding: 10px;
+  background-color: #222;
 }
 ul {
   list-style: none;
+}
+.item-services, .item-contacts, .footer-info__item-link {
+  text-decoration: none;
 }
 .break::after {
   content: "\A";
@@ -55,7 +65,7 @@ ul {
 
 /*Блок header*/
 .header-wrapper {
-  margin: 2vh auto;
+  margin: 2vh auto 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -72,30 +82,18 @@ ul {
   display: inline-block;
 }
 .item-services, .item-contacts {
-  text-decoration: none;
   font-size: calc(1rem + 0.2vw);
   color: #222;
 }
 .item-contacts {
   margin-left: 5vw;
 }
-.header__burger, .burger {
-  display: none;
-}
-
 
 /*Блок main*/
 .main-wrapper {
-  margin: 4vh auto 8vh;
+  margin: 6vh auto 8vh;
   display: flex;
   align-items: center;
-}
-.main-info__logo {
-  border-radius: 100px;
-  max-width: 80px;
-  margin-left: 6%;
-  padding: 10px;
-  background-color: #222;
 }
 .main-info__subtitle {
   margin: 6% 0 3%;
@@ -120,7 +118,6 @@ ul {
 .main-container__telegram img {
   margin-left: 0.6vw;
 }
-
 
 /*Информационная страница № 1*/
 
@@ -246,9 +243,13 @@ h3 {
   right: 0;
 }
 /*Страница с e-mail*/
+.contact {
+  display: flex;
+  justify-content: center;
+}
 .contact-section {
   max-width: 690px;
-  margin: 10% auto;
+  margin: 15% 0 25%;
   text-align: center;
 }
 .contact-section__title {
@@ -261,9 +262,73 @@ h3 {
 }
 
 /*Блок footer*/
+.footer-wrapper {
+  margin: 5% auto 2% ;
+}
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-info__items {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+}
+.footer-info__item-subtitle {
+  margin-top: 5vh;
+}
+.footer-info__item-title {
+  white-space: nowrap;
+  font-size: 26px;
+  color: #41444e;
+}
+.footer-info__item-text, .footer-info__item-link {
+  font-size: 18px;
+  line-height: 1em;
+  color: #41444e;
+}
+.footer-info__item-text_distance {
+  margin-bottom: 5%;
+}
+.footer-info__item-text_email {
+  margin-top: 2%;
+}
+.footer-info__item-link {
+  position: relative;
+  overflow: hidden;
+}
+.footer-info__item-link::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 0;
+  height: 1px;
+  transition: width 0.3s ease-in-out;
+  background: #000;
+}
+.footer-info__item-link:hover:after {
+  width: 100%;
+}
+.footer-border {
+  margin-top: 1%;
+}
+.footer-border::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: #41444e;  
+}
+.footer-close {
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 3% 0 3%;
+}
 
 
-/*Медиа-запросы для блоков header, main, contact*/
+/*Медиа-запросы для блоков header, main, contact, footer*/
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .main-info__title, .contact-section__title {
     font-size: calc(1rem + 3vw);
@@ -271,10 +336,15 @@ h3 {
 }
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-wrapper {
-    flex-direction: column;
     margin-top: 6vh;
   }
-  .main-info {
+  .main-wrapper, .footer-info {
+    flex-direction: column;
+  }
+  .logo {
+    margin: 0;
+  }
+  .main-info, .footer-info__item, .footer-close {
     text-align: center;
   }
   .main-info__title {
@@ -293,14 +363,30 @@ h3 {
   .main-container__telegram {
     top: 0.3vh;
     font-size: 1em;
+  }
+  .footer-info__item-subtitle {
+    margin: 2vh 0;
+  }
+  .footer-info__items {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .footer-close {
+    flex-direction: column;
+    gap: 1vh;
   }
 }
 @media screen and (max-width: 575px) {
   .main-wrapper {
-    flex-direction: column;
     margin-top: 6vh;
   }
-  .main-info {
+  .main-wrapper, .footer-info {
+    flex-direction: column;
+  }
+  .logo {
+    margin: 0;
+  }
+  .main-info, .footer-info__item, .footer-close {
     text-align: center;
   }
   .main-info__title {
@@ -320,30 +406,16 @@ h3 {
     top: 0.3vh;
     font-size: 1em;
   }
-  /*Бургер-меню*/
-  .burger-menu {
-    width: 40px;
+  
+  .footer-info__item-subtitle {
+    margin-top: 3vh;
   }
-  .burger {
-    display: block;
-    position: absolute;
-    right: 5%;
+  .footer-info__items {
+    flex-direction: column;
+    width: 100%;
   }
-  .header__nav {
-    display: none;
-    margin: 0;
-  }
-
-  /*условие появления бургер-меню*/
-  #burger-checkbox:checked + label + nav {
-    display: block;
-  }
-  .header__nav-items {
-    position: absolute;
-    text-align: end;
-    margin-top: 20px;
-    padding: 10px;
-    background: #a8abb31c;
-    transform: translateX(-100%);
+  .footer-close {
+    flex-direction: column;
+    gap: 1vh;
   }
 }
