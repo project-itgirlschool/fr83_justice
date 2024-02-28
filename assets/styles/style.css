@@ -192,15 +192,22 @@ h3 {
 }
 
 .card-container {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: nowrap;
   transition: transform 0.5s ease-in-out;
+  margin-right: 20px;
+  width: calc(600px * 6);
 }
 .card-slider {
-  overflow: hidden;
+  overflow-x: scroll;
 }
 .card-3 {
-  width: 600px;
+  max-width: 600px;
   margin-right: 20px;
+}
+
+.wide {
+  width:800px;
 }
 
 .card-content {
@@ -208,8 +215,8 @@ h3 {
   background-color: white;
 }
 .card-img-bl-3 {
-  width: 300px;
-  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
   margin-right: 25px;
 }
 .prev-btn,
@@ -218,18 +225,25 @@ h3 {
   top: 50%;
   transform: translateY(-50%);
   background-color: #41444e;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   font-size: 24px;
   padding: 10px;
   border: none;
-  border-radius: 100px;
+  width: 80px;
+  height: 80px;
+  opacity: 0.5;
+  border-radius: 50%;
   cursor: pointer;
   z-index: 2;
 }
 .prev-btn {
+  background-image: url('../images/prev-arrow.svg');
   left: 10px;
 }
 .next-btn {
+  background-image: url('../images/next-arrow.svg');
   right: 10px;
 }
 .text-content {
@@ -239,12 +253,15 @@ h3 {
   padding-top: 30px;
 }
 .prev-btn {
+  display: none;
   left: 0;
 }
 
 .next-btn {
   right: 0;
 }
+
+@media screen and (max-width: 575px) 
 /*Страница с e-mail*/
 .contact-section {
   max-width: 690px;
@@ -267,6 +284,25 @@ h3 {
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .main-info__title, .contact-section__title {
     font-size: calc(1rem + 3vw);
+  }
+  .block-2 {
+    margin: 4vw;
+  }
+  .container {
+    width: 100%;
+    margin: 2%;
+  }
+  block-2 .main-info__title, .main-info__subtitle subtitle {
+    text-align: left;
+  }
+  .card-3 {
+    width: auto;
+    margin-right: auto;
+  }
+  .card-img-bl-3 {
+    max-width: 300px;
+    max-height: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 991px) {
@@ -293,6 +329,33 @@ h3 {
   .main-container__telegram {
     top: 0.3vh;
     font-size: 1em;
+  }
+  /*block-2, block-3*/
+  .block-2 {
+    margin: 2vw;
+  }
+  block-2 .main-info__title, .main-info__subtitle subtitle {
+    text-align: left;
+    padding-left: 0%;
+    margin-left: 0%;
+  }
+  .container {
+    width: 100%;
+    margin: 1%;
+  }
+  .card-3 {
+    margin: 0;
+    padding-top: 2%;
+  }
+}
+@media screen and (max-width: 900px){
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+  }
+  .prev-btn,.next-btn {
+    display: none;
   }
 }
 @media screen and (max-width: 575px) {
@@ -345,5 +408,46 @@ h3 {
     padding: 10px;
     background: #a8abb31c;
     transform: translateX(-100%);
+  }
+  /*block-2*/
+  .block-2 {
+    margin: 1vw;
+  }
+  block-2 .main-info__title, .main-info__subtitle subtitle {
+    text-align: left;
+    padding-left: 0%;
+    margin-left: 0%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card-3 {
+    width: 100%;
+  }
+  .wide {
+    width: 600px;
+    height: 400px;
+  }
+  .wide div {
+    height: 100%;
+  }
+  .wide img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card-content {
+    width: 250px;
+    height: 400px;
+  }
+  .wide {
+    width: 300px;
+  }
+  .card-content div {
+    width: 100%;
+  }
+  .card-content img {
+    display: none;
   }
 }
