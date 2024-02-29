@@ -465,6 +465,10 @@ h3 {
     margin: 0;
     padding-top: 2%;
   }
+  .container-block-3 {
+    width: 100%;
+    margin: 1%;
+  }
 }
 @media screen and (max-width: 900px){
   .card-container {
@@ -476,6 +480,12 @@ h3 {
   }
   .prev-btn,.next-btn {
     display: none;
+  }
+  .container-block-3 {
+    overflow-x: hidden; 
+  }
+  .card-slider {
+    overflow-x: hidden;
   }
 }
 @media screen and (max-width: 575px) {
