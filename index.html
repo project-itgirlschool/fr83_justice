@@ -1,80 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/styles/normalize.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/styles/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>Document</title>
 </head>
+
 <body>
-<div class="block-2">
-  <h3>УСЛУГИ ФИЗИЧЕСКИМ ЛИЦАМ</h3>
-  <h2>ОКАЗЫВАЕМ КВАЛИФИЦИРОВАННУЮ ЮРИДИЧЕСКУЮ ПОМОЩЬ</h2>
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card">
-          <img src="./assets/images/predstavitelstvo.png" class="card-img-top" alt="predstavitelstvo">
-          <div class="card-body">
-            <h5 class="card-title">Защита в Суде</h5>
-            <p class="card-text">Поможем защитить права физических и юр. лиц.
-              Оформим документы.
-              Выступим в суде.
-              </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="./assets/images/konsultacii.png" class="card-img-top" alt="konsultacii">
-          <div class="card-body">
-            <h5 class="card-title">Консультации</h5>
-            <p class="card-text">Подробная юридическая помощь по делам любой сложности.
-              Семейные споры. Жилищные споры. Трудовые споры. Взыскание долгов. Наследство.
-              Работаем и дистанционно.
-              </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="./assets/images/iski.png" class="card-img-top" alt="iski">
-          <div class="card-body">
-            <h5 class="card-title">Иски в Суд</h5>
-            <p class="card-text">Помощь по оформлению, подачи заявлений в суд, жалоб, претензий и договоров.
-              Подготовим документы.
-              Вникаем в детали.
-              </p>
-          </div>
-        </div>
-      </div>
-  </div>
-</div>
-<div class="block-3">
-  <h3>СЛОЖНОЕ СТАНЕТ ПРОСТЫМ</h3>
-  <h2>ОКАЗЫВАЕМ
-    ЮРИДИЧЕСКУЮ ПОМОЩЬ
-    ДОРОГО И КОМПЕТЕНТНО
-    </h2>
-</div>
+  <header class="header">
+    <div class="header-wrapper">
+        <div class="header__title header-font">По закону<span class="break"></span>и точка</div>
+        <nav class="header__nav">
+          <ul class="header__nav-items">
+            <li class="nav-item"><a href="#services" class="item-services header-font">Услуги</a></li>
+            <li class="nav-item"><a href="#contact-email" class="item-contacts header-font">Контакты</a></li>
+          </ul>
+        </nav>
+    </div>
+  </header>
   <main class="main">
     <div class="main-wrapper">
       <div class="main-info">
-        <img class="main-info__logo" src="./assets/images/logo_justice.png" alt="logo">
+        <img class="logo" src="./assets/images/logo-main.svg" alt="logo">
         <div class="main-info__subtitle subtitle">ЮРИДИЧЕСКИЕ УСЛУГИ С 2007 ГОДА</div>
         <h2 class="main-info__title">СУДЕБНЫЕ ДЕЛА НАША СПЕЦИАЛИЗАЦИЯ</h2>
-        <p class="main-info__text text-info">Мы не даем пустых обещаний,<span class="break"></span>
+        <p class="main-info__text text-description">Мы не даем пустых обещаний,<span class="break"></span>
           а профессионально оказываем юридическую помощь</p>
       </div>
       <div class="main-container">
         <img class="main-container__image" src="./assets/images/main-image.png" alt="image">
-        <a href="https://t.me/SBosikoV" class="main-container__telegram text-info" target="blank">Написать юристу в Telegram
+        <a href="https://t.me/SBosikoV" class="main-container__telegram text-description" target="blank">Написать юристу
+          в Telegram
           <img src="./assets/images/telegram_logo.png" alt="Написать юристу в Telegram">
         </a>
       </div>
     </div>
   </main>
+  <div class="block-1" id="services">
+    <div class="block-1-wrapper">
+      <div class="block-1-container">
+        <img class="block-1-container__image" src="./assets/images/femida.png" alt="femida">
+      </div>
+      <div class="block-1-info">
+        <div class="block-1-info__subtitle subtitle">ПРИМЕНЯЕМ НАКОПЛЕННЫЙ ГОДАМИ ОПЫТ</div>
+        <h2 class="block-1-info__title">ПОЛНЫЙ СПЕКТР ЮРИДИЧЕСКИХ УСЛУГ</h2>
+        <p class="block-1-info__text text-description">Предоставляем юридические услуги физическим лицам при возникновении проблем, связанных с вопросами жилищного, семейного, уголовного, наследственного, административное законодательства.</p>
+        <p class="block-1-info__text text-description">Наш профессионализм - это надежный партнер, который не только поможет защитить нарушенные права, но и предотвратить их.</p>
+      </div>
+    </div>
+  </div>
+  <div class="block-2">
+    <div class="main-info__subtitle subtitle">УСЛУГИ ФИЗИЧЕСКИМ ЛИЦАМ</div>
+    <h2 class="main-info__title">ОКАЗЫВАЕМ КВАЛИФИЦИРОВАННУЮ ЮРИДИЧЕСКУЮ ПОМОЩЬ</h2>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="./assets/images/predstavitelstvo.png" class="card-img-top-1" alt="predstavitelstvo">
+            <div class="card-body">
+              <h3 class="card-title">Защита в Суде</h3>
+              <p class="card-text">Поможем защитить права физических и юр. лиц.
+                Оформим документы.
+                Выступим в суде.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="./assets/images/konsultacii.png" class="card-img-top-2" alt="konsultacii">
+            <div class="card-body">
+              <h3 class="card-title">Консультации</h3>
+              <p class="card-text">Подробная юридическая помощь по делам любой сложности.
+                Семейные споры. Жилищные споры. Трудовые споры. Взыскание долгов. Наследство.
+                Работаем и дистанционно.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="./assets/images/iski.png" class="card-img-top-3" alt="iski">
+            <div class="card-body">
+              <h3 class="card-title">Иски в Суд</h3>
+              <p class="card-text">Помощь по оформлению, подачи заявлений в суд, жалоб, претензий и договоров.
+                Подготовим документы.
+                Вникаем в детали.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block-3">
+    <div class="main-info__subtitle subtitle">СЛОЖНОЕ СТАНЕТ ПРОСТЫМ</div>
+    <h2 class="main-info__title">ОКАЗЫВАЕМ ЮРИДИЧЕСКУЮ ПОМОЩЬ ДОРОГО И КОМПЕТЕНТНО </h2>
+    <div class="container-block-3">
+      <div class="card-slider">
+        <div class="card-container">
+          <div class="card-3">
+            <div class="card-content">
+              <img src="./assets/images/semeinie-dela.png" class="card-img-bl-3" alt="semeinie-dela">
+              <div class="text-content">
+                <h3 class="card-title">Семейные дела</h5>
+                  <p class="card-text">Сопровождение развода, взыскания алиментов, раздела имущества, споры по детям.
+                    Консультация по телефону. Личная встреча. Полное ведение дела.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-3">
+            <div class="card-content">
+              <img src="./assets/images/nasledstvo.png" class="card-img-bl-3" alt="nasledstvo">
+              <div class="text-content">
+                <h3 class="card-title">Наследство</h5>
+                  <p class="card-text">Сопровождение наследственного дела: признание, сопровождение, судебные споры.
+                    Недостойный наследник. Восстановление сроков. Оспорить завещание.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-3">
+            <div class="card-content">
+              <img src="./assets/images/jilishnie-dela.png" class="card-img-bl-3" alt="jilishnie-dela">
+              <div class="text-content">
+                <h3 class="card-title">Жилищные дела</h5>
+                  <p class="card-text">Ведение дел любой сложности в суде. Споры о недвижимость. Приватизация. Залив
+                    квартиры. Снятие с рег. учета. Выселение. Споры с ЖК.
+                  </p>
+              </div>
+            </div>
+          </div>
+          <div class="card-3">
+            <div class="card-content">
+              <img src="./assets/images/vziskanie.png" class="card-img-bl-3" alt="vziskanie">
+              <div class="text-content">
+                <h3 class="card-title">Взыскание долгов</h5>
+                  <p class="card-text">Вернем долг на любом этапе! Работаем с физическими и юр. лицами. Досудебный
+                    возврат. Через суд.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-3">
+            <div class="card-content">
+              <img src="./assets/images/dosudebnoe.png" class="card-img-bl-3" alt="dosudebnoe">
+              <div class="text-content">
+                <h3 class="card-title">Досудебное урегулирование</h5>
+                  <p class="card-text">Гражданские и административные споры. Юридические консультации, подготовка исков,
+                    жалоб, претензий и договоров. </p>
+              </div>
+            </div>
+          </div>
+          <div class="card-3 wide">
+            <div class="card-content">
+              <img src="./assets/images/blogeri.png" class="card-img-bl-3" alt="blogeri">
+              <div class="text-content">
+                <h3 class="card-title">Защита прав блогеров</h5>
+                  <p class="card-text">Защита авторских прав. Защита при предъявлении претензий/имущественных
+                    требований. Споры посредством индивидуализации (товарные знаки, знаки обслуживания и др.). Защита
+                    патентных прав. Споры по секретам производства (ноу-хау). Правовая охрана рекламы. IT споры
+                    (доменные имена, контент сайта, дизайн и т.д.). Юридическая экспертиза прав.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button class="prev-btn"></button>
+        <button class="next-btn"></button>
+      </div>
+    </div>
+<script>
+  $(document).ready(function () {
+    let currentIndex = 0;
+    const cardContainer = $(".card-container");
+    const cardWidth = $(".card").outerWidth();
+
+    $(".next-btn").on("click", function () {
+    if (currentIndex < cardContainer.children().length - 1) {
+      currentIndex++;
+      updateCardVisibility();
+    }
+  });
+
+  $(".prev-btn").on("click", function () {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCardVisibility();
+    }
+  });
+
+    function updateCardVisibility() {
+      const cardWidth = $(".card").outerWidth();
+      const newPosition = -currentIndex * cardWidth;
+      cardContainer.css("transform", "translateX(" + newPosition + "px)");
+
+      $(".prev-btn, .next-btn").show();
+
+    if (currentIndex === 0) {
+      $(".prev-btn").hide();
+    } else if (currentIndex === cardContainer.children().length - 1) {
+      $(".next-btn").hide();
+    }
+    }
+  });
+</script>
+  </div>
+  <div class="contact" id="contact-email">
+    <div class="contact-section">
+      <div class="contact-section__subtitle subtitle">ХОТИТЕ РЕШИТЬ СВОИ ПРОБЛЕМЫ?</div>
+      <h2 class="contact-section__title">СВЯЖИТЕСЬ С НАМИ
+        ПРЯМО СЕЙЧАС!</h2>
+      <div class="contact-section__email">
+        <a class="email-button text-description" href="mailto:sbosikov@bk.com">Написать на почту</a>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-wrapper">
+      <div class="footer-info">
+        <div class="footer-info__item">
+          <img class="footer-info__item-logo logo" src="./assets/images/logo-main.svg" alt="logo">
+          <div class="footer-info__item-subtitle subtitle">19 ЛЕТ БЕЗУПРЕЧНОЙ РАБОТЫ</div>
+        </div>
+        <div class="footer-info__items">
+          <div class="footer-info__item">
+            <div class="footer-info__item-title text-description">Мы в соцсетях</div>
+            <a href="https://t.me/SBosikoV" class=" footer-info__item-link text-description" target="blank">Telegram
+            </a>
+          </div>
+          <div class="footer-info__item">
+            <div class="footer-info__item-title text-description">Контакты</div>
+            <div class="footer-info__item-text footer-info__item-text_distance text-description">по предварительной записи по телефону</div>
+            <div class="footer-info__item-text text-description">Тел: <a class="footer-info__item-link" href="tel:+79637633373">+7-963-763-3373</a></div>
+            </a>
+            <div class="footer-info__item-text footer-info__item-text_email text-description">E-mail: <a class="footer-info__item-link" href="mailto:sbosikov@bk.com">sbosikov@bk.com</a></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-border"></div>
+      <div class="footer-close">
+        <div class="footer-info__item-text text-description">© Юридические услуги в Москве 2024</div>
+        <div class="footer-info__item-text text-description">Оказываем юридическую помощь с 2007 года</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src='./index.js'></script>
 </body>
+
 </html>
