@@ -21,7 +21,7 @@ body {
   margin: 0;
   padding: 0;
 }
-.main-wrapper, .header-wrapper, .footer-wrapper {
+.header-wrapper, .main-wrapper, .block-1-wrapper, .footer-wrapper {
   max-width: 1440px;
 }
 h2, .header-font {
@@ -42,7 +42,7 @@ h2, .header-font {
   line-height: 1.6em;
   color: #222;
 }
-.header, .main, .contact, .footer {
+.header, .main, .block-1, .contact, .footer {
   padding: 0 4vw;
 }
 .logo {
@@ -93,9 +93,12 @@ ul {
 
 /*Блок main*/
 .main-wrapper {
-  margin: 6vh auto 8vh;
+  margin: 6vh auto 10vh;
   display: flex;
   align-items: center;
+}
+.main-info {
+  max-width: 50%;
 }
 .main-info__subtitle {
   margin: 6% 0 3%;
@@ -121,8 +124,34 @@ ul {
   margin-left: 0.6vw;
 }
 
-
 /*Информационная страница № 1*/
+.block-1-wrapper {
+  margin: 0 auto 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.block-1-container {
+  max-width: 50%;
+}
+.block-1-container__image {
+  width: 100%;
+  height: auto;
+}
+.block-1-info {
+  max-width: 45%;
+}
+.block-1-info__subtitle {
+  margin: 6% 0 3%;
+}
+.block-1-info__title {
+  max-width: 80%;
+  margin-bottom: 3%;
+}
+.block-1-info__text {
+  margin-left: 10%;
+}
+
 
 /*Информационная страница № 2*/
 .block-2 {
@@ -262,10 +291,13 @@ h3 {
 }
 
 /*Страница с e-mail*/
+.contact {
+  padding: 15% 0 20%;
+}
 .contact-section {
   max-width: 690px;
-  margin: 15% auto;
   text-align: center;
+  margin: auto;
 }
 .contact-section__title {
   margin: 3% 0 6%;
@@ -342,9 +374,9 @@ h3 {
   padding: 3%;
 }
 
-/*Медиа-запросы для блоков header, main, contact, footer*/
+/*Медиа-запросы*/
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-  .main-info__title, .contact-section__title {
+  .main-info__title, .block-1-info__title, .contact-section__title {
     font-size: calc(1rem + 3vw);
   }
   .block-2 {
@@ -369,27 +401,30 @@ h3 {
 }
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-wrapper {
-    margin-top: 6vh;
+    margin-bottom: 4vh;
   }
-  .main-wrapper, .footer-info {
+  .main-wrapper, .block-1-wrapper, .footer-info {
     flex-direction: column;
   }
-  .logo {
+  .logo, .block-1-info__text {
     margin: 0;
   }
-  .main-info, .footer-info__item, .footer-close {
+  .main-info {
+    max-width: 100%;
+  }
+  .main-info, .block-1-info, .footer-info__item, .footer-close {
     text-align: center;
   }
-  .main-info__title {
-    margin: auto;
+  .main-info__title, .block-1-info__title {
+    margin: 0 auto 3%;
   }
-  .main-info__title, .contact-section__title {
+  .main-info__title, .block-1-info__title, .contact-section__title {
     font-size: calc(1rem + 3vw);
   }
-  .main-info__subtitle, .main-info__text, .contact-section__subtitle {
+  .main-info__subtitle, .main-info__text, .block-1-info__subtitle, .block-1-info__text, .contact-section__subtitle {
     font-size: calc(1rem + 0.5vw);
   }
-  .main-container {
+  .main-container, .block-1-info, .block-1-container {
     margin-top: 1vh;
     max-width: 100%;
   }
@@ -397,6 +432,11 @@ h3 {
     top: 0.3vh;
     font-size: 1em;
   }
+
+  .block-1-container {
+    display: none;
+  }
+
   .footer-info__item-subtitle {
     margin: 2vh 0;
   }
@@ -440,27 +480,30 @@ h3 {
 }
 @media screen and (max-width: 575px) {
   .main-wrapper {
-    margin-top: 6vh;
+    margin-bottom: 4vh;
   }
-  .main-wrapper, .footer-info {
+  .main-wrapper, .block-1-wrapper, .footer-info {
     flex-direction: column;
   }
-  .logo {
+  .logo, .block-1-info__text {
     margin: 0;
   }
-  .main-info, .footer-info__item, .footer-close  {
+  .main-info {
+    max-width: 100%;
+  }
+  .main-info, .block-1-info, .footer-info__item, .footer-close  {
     text-align: center;
   }
-  .main-info__title {
-    margin: auto;
+  .main-info__title, .block-1-info__title {
+    margin: 0 auto 3%;
   }
-  .main-info__title, .contact-section__title {
+  .main-info__title, .block-1-info__title, .contact-section__title {
     font-size: calc(1rem + 3vw);
   }
-  .main-info__subtitle, .main-info__text, .contact-section__subtitle {
+  .main-info__subtitle, .main-info__text, .block-1-info__subtitle, .block-1-info__text, .contact-section__subtitle {
     font-size: calc(1rem + 0.5vw);
   }
-  .main-container {
+  .main-container, .block-1-info, .block-1-container {
     margin-top: 1vh;
     max-width: 100%;
   }
@@ -468,6 +511,14 @@ h3 {
     top: 0.3vh;
     font-size: 1em;
   }
+
+  .block-1-info {
+    order: 1;
+  }
+  .block-1-container {
+    order: 2;
+  }
+
   .footer-info__item-subtitle {
     margin-top: 3vh;
   }
