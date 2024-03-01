@@ -24,20 +24,21 @@ body {
 .header-wrapper, .main-wrapper, .block-1-wrapper, .footer-wrapper {
   max-width: 1440px;
 }
-h2, .header-font {
-  font-family: 'Lora-Regular', Times, sans-serif;
+h2 {
+  font-family: 'Lora-Regular', sans-serif;
   font-weight: normal;
   font-size: 54px;
   line-height: 1.3em;
   color: #41444e;
 }
 .subtitle {
-  font-family: 'Karla-Bold', Times, sans-serif;
-  font-size: 20px;
+  font-family: 'Karla-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
   color: #a8abb3;
 }
-.text-description {
-  font-family: 'Karla-Regular', Times, sans-serif;
+.text-description, .header-font {
+  font-family: 'Karla-Regular', sans-serif;
   font-size: 18px;
   line-height: 1.6em;
   color: #222;
@@ -73,7 +74,7 @@ ul {
 .header__title {
   text-align: center;
   font-size: calc(0.8rem + 0.1vw);
-  color: #222;
+  line-height: 1.1em;
 }
 .header__nav {
   margin-right: 10%;
@@ -84,7 +85,7 @@ ul {
 .item-services, .item-contacts {
   text-decoration: none;
   font-size: calc(1rem + 0.2vw);
-  color: #222;
+  line-height: 1.1em;
 }
 .item-contacts {
   margin-left: 5vw;
