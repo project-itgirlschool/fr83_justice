@@ -418,11 +418,14 @@ h3 {
     margin-left: 0;
     margin-right: 0;
  }
-  .block-2 .main-info__title, .main-info__subtitle .subtitle {
+  .block-2 .main-info__title {
     text-align: left;
     margin-left: 0;
   }
   .block-2-title {
+    margin: 0;
+  }
+  .block-3-title {
     margin: 0;
   }
   .card-3 {
@@ -488,12 +491,15 @@ h3 {
   .block-2 {
     margin: 2vw;
   }
-  .block-2 .main-info__title, .main-info__subtitle subtitle {
+  .block-2 .main-info__title {
     text-align: left;
     padding-left: 0;
     margin-left: 0;
   }
   .block-2-title {
+    margin: 0;
+  }
+  .block-3-title {
     margin: 0;
   }
   .container {
@@ -598,6 +604,9 @@ h3 {
   .block-2-title {
     margin: 0;
   }
+  .block-3-title {
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -621,7 +630,20 @@ h3 {
     padding-top: 1%;
   }
 }
-
+@media screen and (max-width: 1000px) {
+  .card_security {
+    padding-left: 0;
+    padding-right: 25px;
+  }
+  .card_consulting {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .card_application {
+    padding-left: 25px;
+    padding-right: 0;
+  }
+}
 @media screen and (max-width: 760px) {
   .card_security, .card_consulting, .card_application {
     padding: 0;
