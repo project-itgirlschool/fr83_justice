@@ -231,6 +231,18 @@ h3 {
   width: 400px;
   height: 210px;
 }
+.card_security {
+  padding-left: 0;
+  padding-right: 45px;
+}
+.card_consulting {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+.card_application {
+  padding-left: 45px;
+  padding-right: 0;
+}
 /*Информационная страница № 3*/
 .block-3 {
   margin: 4vw;
@@ -407,9 +419,15 @@ h3 {
     margin-left: 0;
     margin-right: 0;
  }
-  block-2 .main-info__title, .main-info__subtitle subtitle {
+  .block-2 .main-info__title {
     text-align: left;
     margin-left: 0;
+  }
+  .block-2-title {
+    margin: 0;
+  }
+  .block-3-title {
+    margin: 0;
   }
   .card-3 {
     width: auto;
@@ -474,10 +492,16 @@ h3 {
   .block-2 {
     margin: 2vw;
   }
-  block-2 .main-info__title, .main-info__subtitle subtitle {
+  .block-2 .main-info__title {
     text-align: left;
     padding-left: 0;
     margin-left: 0;
+  }
+  .block-2-title {
+    margin: 0;
+  }
+  .block-3-title {
+    margin: 0;
   }
   .container {
     width: 100%;
@@ -513,11 +537,11 @@ h3 {
     margin-left: 0;
     margin-right: 0;
  }
- block-2 .main-info__title, .main-info__subtitle subtitle {
+ .block-2 .main-info__title, .main-info__subtitle .subtitle {
   text-align: left;
   padding-left: 0;
   margin-left: 0;
-}
+  }
 }
 @media screen and (max-width: 575px) {
   .main-wrapper {
@@ -578,6 +602,12 @@ h3 {
     padding-left: 0;
     margin-left: 0;
   }
+  .block-2-title {
+    margin: 0;
+  }
+  .block-3-title {
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -599,5 +629,24 @@ h3 {
   }
   .card-3 {
     padding-top: 1%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .card_security {
+    padding-left: 0;
+    padding-right: 25px;
+  }
+  .card_consulting {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .card_application {
+    padding-left: 25px;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 760px) {
+  .card_security, .card_consulting, .card_application {
+    padding: 0;
   }
 }
