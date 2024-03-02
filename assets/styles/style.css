@@ -410,6 +410,9 @@ h3 {
     text-align: left;
     margin-left: 0;
   }
+  .block-2-title {
+    margin: 0;
+  }
   .card-3 {
     width: auto;
     margin-right: auto;
@@ -477,6 +480,9 @@ h3 {
     text-align: left;
     padding-left: 0;
     margin-left: 0;
+  }
+  .block-2-title {
+    margin: 0;
   }
   .container {
     width: 100%;
@@ -576,6 +582,9 @@ h3 {
     text-align: left;
     padding-left: 0;
     margin-left: 0;
+  }
+  .block-2-title {
+    margin: 0;
   }
 }
 
