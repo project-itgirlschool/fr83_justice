@@ -51,17 +51,20 @@
       <div class="block-1-info">
         <div class="block-1-info__subtitle subtitle">ПРИМЕНЯЕМ НАКОПЛЕННЫЙ ГОДАМИ ОПЫТ</div>
         <h2 class="block-1-info__title">ПОЛНЫЙ СПЕКТР ЮРИДИЧЕСКИХ УСЛУГ</h2>
-        <p class="block-1-info__text text-description">Предоставляем юридические услуги физическим лицам при возникновении проблем, связанных с вопросами жилищного, семейного, уголовного, наследственного, административное законодательства.</p>
-        <p class="block-1-info__text text-description">Наш профессионализм - это надежный партнер, который не только поможет защитить нарушенные права, но и предотвратить их.</p>
+        <p class="block-1-info__text text-description">Предоставляем юридические услуги физическим лицам при
+          возникновении проблем, связанных с вопросами жилищного, семейного, уголовного, наследственного,
+          административное законодательства.</p>
+        <p class="block-1-info__text text-description">Наш профессионализм - это надежный партнер, который не только
+          поможет защитить нарушенные права, но и предотвратить их.</p>
       </div>
     </div>
   </div>
   <div class="block-2">
     <div class="main-info__subtitle subtitle">УСЛУГИ ФИЗИЧЕСКИМ ЛИЦАМ</div>
-    <h2 class="main-info__title">ОКАЗЫВАЕМ КВАЛИФИЦИРОВАННУЮ ЮРИДИЧЕСКУЮ ПОМОЩЬ</h2>
-    <div class="container">
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
+    <h2 class="main-info__title block-2-title">ОКАЗЫВАЕМ КВАЛИФИЦИРОВАННУЮ ЮРИДИЧЕСКУЮ ПОМОЩЬ</h2>
+    <div class="container-fluid">
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col card_security">
           <div class="card">
             <img src="./assets/images/predstavitelstvo.png" class="card-img-top-1" alt="predstavitelstvo">
             <div class="card-body">
@@ -73,7 +76,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col card_consulting">
           <div class="card">
             <img src="./assets/images/konsultacii.png" class="card-img-top-2" alt="konsultacii">
             <div class="card-body">
@@ -85,7 +88,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col card_application">
           <div class="card">
             <img src="./assets/images/iski.png" class="card-img-top-3" alt="iski">
             <div class="card-body">
@@ -102,7 +105,7 @@
   </div>
   <div class="block-3">
     <div class="main-info__subtitle subtitle">СЛОЖНОЕ СТАНЕТ ПРОСТЫМ</div>
-    <h2 class="main-info__title">ОКАЗЫВАЕМ ЮРИДИЧЕСКУЮ ПОМОЩЬ ДОРОГО И КОМПЕТЕНТНО </h2>
+    <h2 class="main-info__title main-info__second_block block-3-title">ОКАЗЫВАЕМ ЮРИДИЧЕСКУЮ ПОМОЩЬ ДОРОГО И КОМПЕТЕНТНО </h2>
     <div class="container-block-3">
       <div class="card-slider">
         <div class="card-container">
@@ -157,15 +160,13 @@
               </div>
             </div>
           </div>
-          <div class="card-3 wide">
+          <div class="card-3">
             <div class="card-content">
               <img src="./assets/images/blogeri.png" class="card-img-bl-3" alt="blogeri">
               <div class="text-content">
                 <h3 class="card-title">Защита прав блогеров</h5>
-                  <p class="card-text">Защита авторских прав. Защита при предъявлении претензий/имущественных
-                    требований. Споры посредством индивидуализации (товарные знаки, знаки обслуживания и др.). Защита
-                    патентных прав. Споры по секретам производства (ноу-хау). Правовая охрана рекламы. IT споры
-                    (доменные имена, контент сайта, дизайн и т.д.). Юридическая экспертиза прав.</p>
+                  <p class="card-text">Защита авторских прав. Правовая охрана рекламы. IT споры (доменные имена, контент
+                    сайта, дизайн и т.д.).</p>
               </div>
             </div>
           </div>
@@ -176,41 +177,41 @@
         <button class="next-btn"></button>
       </div>
     </div>
-<script>
-  $(document).ready(function () {
-    let currentIndex = 0;
-    const cardContainer = $(".card-container");
-    const cardWidth = $(".card").outerWidth();
+    <script>
+      $(document).ready(function () {
+        let currentIndex = 0;
+        const cardContainer = $(".card-container");
+        const cardWidth = $(".card").outerWidth();
 
-    $(".next-btn").on("click", function () {
-    if (currentIndex < cardContainer.children().length - 1) {
-      currentIndex++;
-      updateCardVisibility();
-    }
-  });
+        $(".next-btn").on("click", function () {
+          if (currentIndex < cardContainer.children().length - 1) {
+            currentIndex++;
+            updateCardVisibility();
+          }
+        });
 
-  $(".prev-btn").on("click", function () {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCardVisibility();
-    }
-  });
+        $(".prev-btn").on("click", function () {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateCardVisibility();
+          }
+        });
 
-    function updateCardVisibility() {
-      const cardWidth = $(".card").outerWidth();
-      const newPosition = -currentIndex * cardWidth;
-      cardContainer.css("transform", "translateX(" + newPosition + "px)");
+        function updateCardVisibility() {
+          const cardWidth = $(".card").outerWidth();
+          const newPosition = -currentIndex * cardWidth;
+          cardContainer.css("transform", "translateX(" + newPosition + "px)");
 
-      $(".prev-btn, .next-btn").show();
+          $(".prev-btn, .next-btn").show();
 
-    if (currentIndex === 0) {
-      $(".prev-btn").hide();
-    } else if (currentIndex === cardContainer.children().length - 1) {
-      $(".next-btn").hide();
-    }
-    }
-  });
-</script>
+          if (currentIndex === 0) {
+            $(".prev-btn").hide();
+          } else if (currentIndex === cardContainer.children().length - 1) {
+            $(".next-btn").hide();
+          }
+        }
+      });
+    </script>
   </div>
   <div class="contact" id="contact-email">
     <div class="contact-section">
@@ -237,8 +238,10 @@
           </div>
           <div class="footer-info__item">
             <div class="footer-info__item-title text-description">Контакты</div>
-            <div class="footer-info__item-text footer-info__item-text_distance text-description">по предварительной записи по телефону</div>
-            <div class="footer-info__item-text text-description">Тел: <a class="footer-info__item-link" href="tel:+79637633373">+7-963-763-3373</a></div>
+            <div class="footer-info__item-text footer-info__item-text_distance text-description">по предварительной
+              записи по телефону</div>
+            <div class="footer-info__item-text text-description">Тел: <a class="footer-info__item-link"
+                href="tel:+79637633373">+7-963-763-3373</a></div>
             </a>
             <div class="footer-info__item-text footer-info__item-text_email text-description">E-mail: <a class="footer-info__item-link" href="mailto:sbosikov@bk.ru">sbosikov@bk.ru</a></div>
             </a>
