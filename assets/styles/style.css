@@ -269,7 +269,7 @@ h3 {
   flex-wrap: nowrap;
   transition: transform 0.5s ease-in-out;
   margin-right: auto;
-  width: calc(600px * 6);
+  width: calc(600px * 7);
 }
 
 .card-3 {
